@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5944724D-657C-4D1E-BDAD-A358D9FB54F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MegaFLE_X.My.MyApplication</StartupObject>
+    <RootNamespace>MegaFLE_X</RootNamespace>
+    <AssemblyName>MegaFLE_X</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MegaFLE_X.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MegaFLE_X.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>_Misc\Icons_Images\Project1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\_Common\Classes\clsDialog.vb">
+      <Link>Classes\clsDialog.vb</Link>
+    </Compile>
+    <Compile Include="..\_Common\Modules\Common.vb">
+      <Link>Modules\Common.vb</Link>
+    </Compile>
+    <Compile Include="..\_Common\Modules\RenderModule.vb">
+      <Link>Modules\RenderModule.vb</Link>
+    </Compile>
+    <Compile Include="Classes\DataMoverBot.vb" />
+    <Compile Include="Forms\About.designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Config.Designer.vb">
+      <DependentUpon>Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoorEd.Designer.vb">
+      <DependentUpon>DoorEd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoorEd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EnemEd.Designer.vb">
+      <DependentUpon>EnemEd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnemEd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GfxLoadEd%28PPUEffEd%29.Designer.vb">
+      <DependentUpon>GfxLoadEd%28PPUEffEd%29.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GfxLoadEd%28PPUEffEd%29.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MFLE_Main.Designer.vb">
+      <DependentUpon>MFLE_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MFLE_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MiscEd.Designer.vb">
+      <DependentUpon>MiscEd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MiscEd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PalChart.Designer.vb">
+      <DependentUpon>PalChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PalChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PalEd.Designer.vb">
+      <DependentUpon>PalEd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PalEd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProtoWnd.Designer.vb">
+      <DependentUpon>ProtoWnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProtoWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SBDSpecial.Designer.vb">
+      <DependentUpon>SBDSpecial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SBDSpecial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScreenEd.Designer.vb">
+      <DependentUpon>ScreenEd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScreenEd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MetametatileTable.Designer.vb">
+      <DependentUpon>MetametatileTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MetametatileTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TextEd.Designer.vb">
+      <DependentUpon>TextEd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextEd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TileTable.Designer.vb">
+      <DependentUpon>TileTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TileTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MetatileTable.Designer.vb">
+      <DependentUpon>MetatileTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MetatileTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\MegaFLEX_Main.vb" />
+    <Compile Include="Modules\MFLE_Decl.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Config.resX">
+      <DependentUpon>Config.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoorEd.resX">
+      <DependentUpon>DoorEd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EnemEd.resx">
+      <DependentUpon>EnemEd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GfxLoadEd%28PPUEffEd%29.resX">
+      <DependentUpon>GfxLoadEd%28PPUEffEd%29.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MFLE_Main.resX">
+      <DependentUpon>MFLE_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MiscEd.resX">
+      <DependentUpon>MiscEd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PalChart.resX">
+      <DependentUpon>PalChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PalEd.resX">
+      <DependentUpon>PalEd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProtoWnd.resX">
+      <DependentUpon>ProtoWnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SBDSpecial.resX">
+      <DependentUpon>SBDSpecial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScreenEd.resX">
+      <DependentUpon>ScreenEd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MetametatileTable.resX">
+      <DependentUpon>MetametatileTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TextEd.resX">
+      <DependentUpon>TextEd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TileTable.resX">
+      <DependentUpon>TileTable.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MetatileTable.resX">
+      <DependentUpon>MetatileTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Misc\App.config" />
+    <None Include="_Misc\Include_With_Release\fr_nesB.pal" />
+    <None Include="_Misc\Include_With_Release\Icons\Thumbs.db" />
+    <None Include="_Misc\Include_With_Release\megafle.dat" />
+    <None Include="_Misc\Include_With_Release\megaflex.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application1.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="_Misc\Icons_Images\default.ico" />
+    <Content Include="_Misc\Icons_Images\door.ico" />
+    <Content Include="_Misc\Icons_Images\Images\SHIFTH.png" />
+    <Content Include="_Misc\Icons_Images\Images\SHIFTV.png" />
+    <Content Include="_Misc\Icons_Images\Images\TROTATE.png" />
+    <Content Include="_Misc\Icons_Images\metall.ico" />
+    <Content Include="_Misc\Icons_Images\misc.ico" />
+    <Content Include="_Misc\Icons_Images\palette.ico" />
+    <Content Include="_Misc\Icons_Images\Project1.ico" />
+    <Content Include="_Misc\Icons_Images\screen.ico" />
+    <Content Include="_Misc\Icons_Images\tileface.ico" />
+    <Content Include="_Misc\Icons_Images\tsa.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\0.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\0.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\0.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\1.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\1.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\1.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\10.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\10.GIF" />
+    <Content Include="_Misc\Include_With_Release\Icons\10.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\11.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\11.GIF" />
+    <Content Include="_Misc\Include_With_Release\Icons\11.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\12.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\12.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\13.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\2.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\2.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\2.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\3.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\3.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\3.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\4.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\4.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\4.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\5.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\5.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\5.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\6.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\6.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\6.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\7.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\7.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\7.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\8.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\8.gif" />
+    <Content Include="_Misc\Include_With_Release\Icons\8.ico" />
+    <Content Include="_Misc\Include_With_Release\Icons\9.bmp" />
+    <Content Include="_Misc\Include_With_Release\Icons\9.GIF" />
+    <Content Include="_Misc\Include_With_Release\Icons\9.ico" />
+    <Content Include="_Misc\Include_With_Release\patches\mm4\Disable_Cossack_3_Autoscroll.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm4\Disable_Intro.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm4\Disable_Sprite_Palette_Animation.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm4\Slippery_Block_-_Use_in_any_level.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm5\Change_Starting_Lives.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm5\Disable_Intro.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm5\Remove_Gravityman_Hardcoded_CHR_Animation.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\mm5\Water_Property_In_Any_Level.txt" />
+    <Content Include="_Misc\Include_With_Release\patches\template.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Misc\Include_With_Release\patches\mm3\" />
+    <Folder Include="_Misc\Include_With_Release\patches\mm6\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

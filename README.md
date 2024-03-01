@@ -1,0 +1,45 @@
+Important
+---------
+MegaFLE_X and CSA sharing one solution.
+For MegaFLE_X, first move content of MegaFLE_X\_Misc\Include_With_Release into executable folder (bin/Debug or bin/Release).
+For CSA, first move content of CSA\_Misc\Include_With_Release into executable folder (bin/Debug or bin/Release).
+
+MegaFLE_X:
+----------
+Compiled:
+Level editor for Mega Man 3, 4, 5 & 6. 
+
+CSA (Capcom Sprite Assemble):
+-----------------------------
+Compiled:
+What it can do:
+    Move tiles, edit their properties.
+    It has a built-in tile editor, changes are reflected immediately on the main pic.
+    For some games, insert and delete tiles, and insert/delete animation frames.
+    There is a “support file” system in place for supported games. They are .txt files. Thus the editor can be configurated to work for hacks where sprite banks are moved. Other things are possible too.
+Supported, or partially supported games:
+    Darkwing Duck
+    Duck Tales
+    Mega Man II, III*, IV and V.
+    Mighty Final Fight
+
+Now.. about the great issues with the program in its current form. Most of the sprites shows up with the wrong graphics. Only standard sprites and some enemy sprites should show up correctly. But most of the problems are how easy it is to corrupt sprite data. Data is seperated into 3 types of data. Many times data is re-used by multiple sprites. So moving tiles in one sprite can lead to another sprite getting the same effect. Re-used data is also a problem when inserting/deleting tiles. If unlucky, you might be unable to properly edit a sprite, or two different datas go “into” each other.
+
+If you want to be safe, follow these guidelines:
+    Don’t use the “Clean Up Data” function, because I’m not sure if its 100% reliable.
+    Don’t change Coordinate IDs.
+    If there are multiple entries below “(Coord used by Frames:)”, do not insert or delete tiles.
+    
+Problems that may never be fixed (MegaFLE_X)
+--------------------------------------------
+To render pic without using DLLs and only using available options in VS2022, original way was modified (using external DLL). Using the new way, it was slow at first, so needed to have a Boolean that indicate if an image’s pixels or palette were redone and need to be rendered again. If so, new pic is rendered.
+If palettes were updated, but image pixel placement wasn’t changed, every pixels in the array is recalculated using appropriate palette. This resulted in problems:
+-	It is slower than old MegaFLE_X on XP (when opening every window in Gravity Man, it is possible to see Palette Animation is not refreshed as fast). Execution seem to not be fast enough to have palette animated as fast as they should.
+-	When switching level from Charge Man to Napalm Man, it can be seen that level is updated with wrong palettes – this is really fast (Screen editor needs to be opened on first screen of level and this happens quickly).
+o	This would mean a render is done with palette being changed while images were not updated?
+When a form is opened, before controls are actually placed correctly, they can be seen in initial place (all the text, button and everything are seen at incorrect position - this is because form is showns because actual elements are placed correctly - likely common to every VS2022 applications).
+-	SBD editor screen should always align with enemy editor and screen editor (and vis versa)
+
+To implement (MegaFLE_X)
+------------------------
+Screen editor button “BtnDumpLevelMap” will eventually dump all level as they are shown on VG Maps

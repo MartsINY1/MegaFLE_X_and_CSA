@@ -17,22 +17,22 @@ Original by Matrixz.
 CSA (Capcom Sprite Assemble):
 -----------------------------
 What it can do:
--	Move tiles, edit their properties.
--	It has a built-in tile editor, changes are reflected immediately on the main pic.
--	For some games, insert and delete tiles, and insert/delete animation frames.
--	There is a “support file” system in place for supported games. They are .txt files. Thus the editor can be configurated to work for hacks where sprite banks are moved. Other things are possible too.
+    Move tiles, edit their properties.
+    It has a built-in tile editor, changes are reflected immediately on the main pic.
+    For some games, insert and delete tiles, and insert/delete animation frames.
+    There is a “support file” system in place for supported games. They are .txt files. Thus the editor can be configurated to work for hacks where sprite banks are moved. Other things are possible too.
 Supported, or partially supported games:
--	Darkwing Duck
--	Duck Tales
--	Mega Man II, III, IV and V.
--	Mighty Final Fight
+    Darkwing Duck
+    Duck Tales
+    Mega Man II, III, IV and V.
+    Mighty Final Fight
 
 Now.. about the great issues with the program in its current form. Most of the sprites shows up with the wrong graphics. Only standard sprites and some enemy sprites should show up correctly. But most of the problems are how easy it is to corrupt sprite data. Data is seperated into 3 types of data. Many times data is re-used by multiple sprites. So moving tiles in one sprite can lead to another sprite getting the same effect. Re-used data is also a problem when inserting/deleting tiles. If unlucky, you might be unable to properly edit a sprite, or two different datas go “into” each other.
 
 If you want to be safe, follow these guidelines:
--	Don’t use the “Clean Up Data” function, because I’m not sure if its 100% reliable.
--	Don’t change Coordinate IDs.
--	If there are multiple entries below “(Coord used by Frames:)”, do not insert or delete tiles.
+    Don’t use the “Clean Up Data” function, because I’m not sure if its 100% reliable.
+    Don’t change Coordinate IDs.
+    If there are multiple entries below “(Coord used by Frames:)”, do not insert or delete tiles.
 	
 Original by Matrixz.
     

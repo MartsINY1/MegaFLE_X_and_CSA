@@ -21,7 +21,6 @@ What it can do:
 -	It has a built-in tile editor, changes are reflected immediately on the main pic.
 -	For some games, insert and delete tiles, and insert/delete animation frames.
 -	There is a “support file” system in place for supported games. They are .txt files. Thus the editor can be configurated to work for hacks where sprite banks are moved. Other things are possible too.
-
 Supported, or partially supported games:
 -	Darkwing Duck
 -	Duck Tales
